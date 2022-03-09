@@ -1,0 +1,13 @@
+<section class="header">
+    <div class="header__box wrapper--big">
+        <a class="header__logo" [routerLink]="''">
+            <img src="../../../assets/images/logo.svg" alt="header__logo">
+            <div class="header__logo--naming color-darker-gray">Sabrina Fiore</div>
+        </a>
+        <div class="header__content">
+            <ng-template ngFor let-link [ngForOf]="links" let-i="index">
+                <a class="header__items color-darker-gray" [routerLink]="link.path">{{ link.name }}</a>
+            </ng-template>
+        </div>
+    </div>
+</section>

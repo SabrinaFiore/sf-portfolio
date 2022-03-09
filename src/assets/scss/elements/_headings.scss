@@ -1,0 +1,100 @@
+/* Typography custom properties */
+
+:root {
+  --font-size: 1rem; /* 16px */
+  --ratio: 1.333;
+
+  /* Calculate values */
+
+  --h4: calc(var(--font-size) * var(--ratio));
+  --h3: calc(var(--h4) * var(--ratio));
+  --h2: calc(var(--h3) * var(--ratio));
+  --h1: calc(var(--h2) * var(--ratio));
+}
+
+/* Set typoghraphy class */
+
+.h1 {
+  font-size: var(--h1);
+  font-family: $typography-primary-regular;
+}
+
+.h2 {
+  font-size: var(--h2);
+  font-family: $typography-primary-regular;
+}
+
+.h3 {
+  font-size: var(--h3);
+  font-family: $typography-primary-regular;
+}
+
+.h4 {
+  font-size: var(--h4);
+  font-family: $typography-primary-regular;
+}
+
+.h5 {
+  font-size: $unit-spacing--1;
+  font-family: $typography-primary-regular;
+}
+
+.typography-primary {
+  font-family: $typography-primary-regular;
+}
+
+.typography-secondary {
+  font-family: $typography-secondary-regular;
+}
+
+.typography-third {
+  font-family: $typography-third-regular;
+}
+
+.typography-fourth {
+  font-family: $typography-fourth-regular;
+}
+
+.paragraph {
+  font-size: var(--font-size);
+  font-family: $typography-secondary-regular;
+}
+
+.link {
+  font-size: var(--font-size);
+  font-family: $typography-secondary-regular;
+}
+
+/* Typography styles */
+.text-left {
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.quote {
+  line-height: $unit-spacing*3;
+  font-size: $unit-spacing*2;
+  font-style: italic;
+  text-align: center;
+  display: flex;
+  align-content: center;
+}
+
+.normal {
+  font-weight: normal!important;
+}
+
+.line-height-small {
+  line-height: $unit-spacing*1.5;
+}
+
+.line-height-medium {
+  line-height: $unit-spacing*2;
+}

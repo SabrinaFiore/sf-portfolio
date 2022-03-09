@@ -1,0 +1,21 @@
+/* Color */
+
+$c-white: #ffffff;
+$c-white--1: #f3f3f3;
+$c-white--2: #fefdfd;
+$c-white-darker: #f9f9f8;
+$c-white-darker--1: #dfdfdf;
+$c-white-darker--2: #f0f0f0;
+$c-black: #000000;
+$c-dark-gray: #313030;
+$c-darker-gray: #222222;
+$c-light-gray: #868686;
+
+/* Useful classes */
+.color-darker-gray {
+  color: $c-darker-gray;
+}
+
+.color-light-gray {
+  color: $c-light-gray;
+}

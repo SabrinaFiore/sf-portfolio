@@ -1,0 +1,89 @@
+/* Footer */
+
+.footer {
+  background-color: $c-white;
+  padding: $unit-spacing--1 $unit-spacing*2;
+  width: 100vw;
+  bottom: 0;
+  box-shadow: 0px 0px 5px #868686;
+  position: fixed;
+  z-index: 999;
+
+  @include breakpoints(break-x-medium) {
+    padding: $unit-spacing $unit-spacing*2;
+  }
+
+  &--content {
+    align-items: center;
+    display: flex;
+    color: $c-dark-gray;
+    justify-content: space-between;
+
+    @include breakpoints(break-x-medium) {
+      display: block;
+    }
+  }
+
+  @include breakpoints(break-x-medium) {
+    display: block;
+    text-align: center;
+  }
+
+  ul, a {
+    list-style: none;
+    text-decoration: none;
+  }
+
+  &--addr {
+    display: flex;
+    align-items: center;
+
+    @include breakpoints(break-x-medium) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &--advertising {
+    font-family: $typography-secondary-regular;
+    font-size: $unit-spacing;
+    padding-right: $unit-spacing--1;
+
+    @include breakpoints(break-x-medium) {
+      margin-bottom: $unit-spacing--2;
+    }
+  }
+
+  &--email {
+    font-style: normal;
+
+    @include breakpoints(break-x-medium) {
+      margin-bottom: $unit-spacing--2;
+    }
+  }
+
+  &--social-item {
+    padding-right: $unit-spacing--2;
+  }
+
+  &--social-items {
+    display: flex;
+    padding-right: $unit-spacing--2;
+
+    @include breakpoints(break-x-medium) {
+      justify-content: center;
+    }
+  }
+
+  &--social-icon {
+    height: 100%;
+    max-width: 20px;
+    width: 100%;
+  }
+}
+
+.pre-footer {
+  min-height: 120px;
+  height: 120px;
+  width: 100%;
+}

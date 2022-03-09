@@ -1,0 +1,93 @@
+/* Card */
+
+.card {
+  &--scroll-content {
+    height: 500px;
+    line-height: $unit-spacing-1;
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 2fr 0.75fr;
+    gap: 10px 10px;
+    z-index: 100;
+
+    @include breakpoints(break-x-medium) {
+      display: block;
+      padding: 0 $unit-spacing--1;
+    }
+
+    &:hover {
+      figure.preview {
+        filter: brightness(1);
+      }
+    }
+  }
+
+  &--box {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 2fr 1.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ". .";
+
+    @include breakpoints(break-x-medium) {
+      display: block;
+      padding: $unit-spacing--1 0;
+    }
+  }
+
+  &--paragraph {
+    display: flex;
+    padding-top: $unit-spacing;
+  }
+
+  &--desc,
+  &--project-link {
+    text-decoration: underline;
+    color: $c-darker-gray;
+  }
+
+  &--title,
+  &--desc,
+  &--number,
+  &--role,
+  &--time,
+  &--project,
+  &--no-project {
+    font-family: $typography-primary-regular;
+    color: $c-darker-gray;
+    padding: 0 1rem;
+  }
+
+  &--number {
+    font-size: $unit-spacing-1;
+    font-weight: 600;
+    padding-right: $unit-spacing--2;
+  }
+
+  &--title {
+    font-weight: 600;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.one, .two, .three, .four {
+  figure.img {
+    filter: brightness(0.6);
+    // width: 475px;
+    height: 300px;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+.one {
+  figure.active {
+    filter: brightness(1);
+  }
+}

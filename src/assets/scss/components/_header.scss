@@ -1,0 +1,76 @@
+/* Header */
+
+.header {
+  background-color: $c-white;
+  box-shadow: 0px 1px 5px $c-light-gray;
+  padding: $unit-spacing--2 0;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  @include breakpoints(break-x-medium) {
+    padding: $unit-spacing--1 0;
+  }
+
+  &__box {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: $typography-primary-regular;
+    justify-content: space-between;
+    max-width: $s960;
+    padding: 0 $unit-spacing--1;
+
+    @include breakpoints(break-x-medium) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+
+    @include breakpoints(break-x-medium) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    align-items: center;
+    display: flex;
+
+    @include breakpoints(break-x-medium) {
+      display: block;
+      text-align: center;
+    }
+
+    &--naming {
+      font-family: $typography-primary-regular;
+      font-weight: lighter;
+      font-size: $unit-spacing;
+      line-height: 22px;
+      padding-left: $unit-spacing--2;
+
+      @include breakpoints(break-x-medium) {
+        display: none;
+      }
+    }
+
+    & img {
+      width: 50px;
+    }
+  }
+
+  &__items {
+    font-family: $typography-secondary-regular;
+    font-size: $unit-spacing;
+    padding: 0 $unit-spacing*3;
+
+    @include breakpoints(break-x-medium) {
+      padding: 0 $unit-spacing;
+    }
+  }
+}

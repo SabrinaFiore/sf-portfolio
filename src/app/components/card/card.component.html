@@ -1,0 +1,32 @@
+<div class="card">
+  <section class="card--scroll-content one" *ngFor="let item of items; let i = index">
+    <div class="empty"></div>
+    <div class="card--box">
+      <figure class="img preview">
+        <img src="{{ item.url }}" alt="img-{{i + 1}}" />
+      </figure>
+      <div class="card--paragraph">
+        <div class="card--unit">
+          <div class="card--number spacing-bottom">{{ item.number }}</div>
+        </div>
+        <div class="card--content text-left">
+          <div class="card--title h4 spacing-bottom">{{ item.role }}</div>
+          <a class="card--desc" href="{{ item.link }}" target="_blank">{{ item.headline }}</a>
+          <div class="card--time">{{ item.description }}</div>
+          <ng-container *ngIf="item.project; else noProject">
+            <div class="spacing"></div>
+            <div class="card--project">Projects:
+              <div *ngFor="let project of item.project">
+                <a class="card--project-link" href="{{project.link}}" target="_blank">{{ project.name }}</a>
+              </div>
+            </div>
+          </ng-container>
+          <ng-template #noProject>
+            <div class="card--no-project">Project: not available</div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="empty"></div>
+  </section>
+</div>

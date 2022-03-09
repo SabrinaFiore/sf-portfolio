@@ -1,0 +1,26 @@
+/* Settings */
+@import '../src/assets/scss/tools/media-queries';
+@import '../src/assets/scss/tools/media-queries-mixin';
+@import '../src/assets/scss/tools/wrapper';
+@import '../src/assets/scss/tools/unit';
+
+/* Base */
+@import '../src/assets/scss/settings/color';
+@import '../src/assets/scss/settings/typography';
+@import '../src/assets/scss/settings/reset';
+
+/* Elements */
+@import '../src/assets/scss/elements/border';
+@import '../src/assets/scss/elements/headings';
+
+/* Components */
+@import '../src/assets/scss/components/card';
+@import '../src/assets/scss/components/education';
+@import '../src/assets/scss/components/footer';
+@import '../src/assets/scss/components/grid';
+@import '../src/assets/scss/components/header';
+@import '../src/assets/scss/components/hero';
+@import '../src/assets/scss/components/layout';
+@import '../src/assets/scss/components/gallery';
+@import '../src/assets/scss/components/main';
+@import '../src/assets/scss/components/paragraph';

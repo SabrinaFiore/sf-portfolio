@@ -1,0 +1,11 @@
+/* Border */
+
+// Color
+$border-base-cyan: linear-gradient(to bottom, #065B51, #99BED1);
+$border-base-grayish-red: linear-gradient(to bottom, #FECDCD, #833E25);
+$border-base-dark-red: linear-gradient(to bottom, #E9A0F8, #830110);
+
+// Style
+$border-size: $unit-spacing solid;
+$image-slice: 1;
+$border-width: $unit-spacing--1;

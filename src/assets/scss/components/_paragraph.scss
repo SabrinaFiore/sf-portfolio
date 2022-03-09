@@ -1,0 +1,12 @@
+/* Paragraph */
+
+.paragraph {
+  &--pattern {
+    margin: 0 auto;
+    padding: $unit-spacing;
+  }
+
+  &--header {
+    display: flex;
+  }
+}

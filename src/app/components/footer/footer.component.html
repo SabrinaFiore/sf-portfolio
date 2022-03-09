@@ -1,0 +1,26 @@
+<div class="footer--content wrapper">
+  <div class="footer--addr">
+    <div class="footer--identity">
+      <div class="footer--advertising">
+        Let's keep in touch to create amazing stuff
+      </div>
+    </div>
+    <address>
+      <a class="footer--email" href="sabrinafiore1992@gmail.com" target="_blank"> sabrinafiore1992@gmail.com</a>
+    </address>
+  </div>
+
+  <ul class="footer--social">
+    <div class="footer--social-info">
+      <ul class="footer--social-items">
+        <ng-template ngFor let-item [ngForOf]="items" let-i="index">
+          <li class="footer--social-item">
+            <a class="footer--social-link" href="{{ item.link }}" target="_blank">
+              <img class="footer--social-icon" src="{{ item.url }}" alt="">
+            </a>
+          </li>
+        </ng-template>
+      </ul>
+    </div>
+  </ul>
+</div>
