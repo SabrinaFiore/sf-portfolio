@@ -5,7 +5,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 @Component({
   selector: 'view-work',
   templateUrl: './view-work.component.html',
-  styleUrls: ['./view-work.components.scss']
 })
 export class ViewWorkTwoComponent implements AfterViewInit, OnDestroy {
 

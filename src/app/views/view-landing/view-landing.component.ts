@@ -14,7 +14,7 @@ export class ViewLandingComponent implements OnInit, OnDestroy {
 
   @ViewChild('secondSection', {static: true}) secondSection: ElementRef<HTMLDivElement> | undefined;
   @ViewChild('imageFirst', { static: true }) imageFirst!: ElementRef<HTMLDivElement>;
-  @ViewChild('imageSecond', { static: true }) imageSecond!: ElementRef<HTMLDivElement>;
+  // @ViewChild('imageSecond', { static: true }) imageSecond!: ElementRef<HTMLDivElement>;
   // @ViewChild('imageThird', { static: true }) imageThird!: ElementRef<HTMLDivElement>;
 
   constructor(@Inject(DOCUMENT) private document: Document) { }
@@ -42,26 +42,26 @@ export class ViewLandingComponent implements OnInit, OnDestroy {
       scale: 1.2,
       height: 250,
     });
-    gsap.to(this.imageSecond.nativeElement, {
-      scrollTrigger: {
-        trigger: this.imageSecond.nativeElement,
-        scrub: true,
-        start: '80% center',
-      },
-      duration: 1.1,
-      scale: 1.2,
-      height: 380,
-    });
-    gsap.to(this.imageSecond.nativeElement, {
-      scrollTrigger: {
-        trigger: this.imageSecond.nativeElement,
-        scrub: true,
-        start: '80% center',
-      },
-      duration: 1.1,
-      scale: 1.2,
-      height: 380,
-    });
+    // gsap.to(this.imageSecond.nativeElement, {
+    //   scrollTrigger: {
+    //     trigger: this.imageSecond.nativeElement,
+    //     scrub: true,
+    //     start: '80% center',
+    //   },
+    //   duration: 1.1,
+    //   scale: 1.2,
+    //   height: 380,
+    // });
+    // gsap.to(this.imageSecond.nativeElement, {
+    //   scrollTrigger: {
+    //     trigger: this.imageSecond.nativeElement,
+    //     scrub: true,
+    //     start: '80% center',
+    //   },
+    //   duration: 1.1,
+    //   scale: 1.2,
+    //   height: 380,
+    // });
     gsap.to(this.document.querySelector('.main--heading-1'), {
       scrollTrigger: {
         trigger: this.document.querySelector('.main--heading-1'),
@@ -111,12 +111,12 @@ export class ViewLandingComponent implements OnInit, OnDestroy {
       y: -30,
       delay: 0.5,
     });
-    gsap.from(this.imageSecond.nativeElement, {
-      duration: 0.7,
-      opacity: 0,
-      y: -30,
-      delay: 0.6,
-    });
+    // gsap.from(this.imageSecond.nativeElement, {
+    //   duration: 0.7,
+    //   opacity: 0,
+    //   y: -30,
+    //   delay: 0.6,
+    // });
     gsap.from(this.document.querySelector('.main--heading-1'), {
       duration: 0.7,
       opacity: 0,

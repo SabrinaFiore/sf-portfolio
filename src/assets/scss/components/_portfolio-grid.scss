@@ -1,4 +1,4 @@
-/* grid layout */
+/* Portfolio-grid */
 
 #portfolio-grid {
   display: grid;
@@ -13,10 +13,6 @@
 @media (min-width: 768px) {
 	#portfolio-grid {
 		grid-template-columns: repeat(2, 1fr);
-	}
-
-	#project-1 {
-		// grid-area: span 1 / span 2;
 	}
 }
 
@@ -61,4 +57,13 @@
 	padding: 2rem;
 	z-index: 3;
   text-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-grid--central-content {
+  margin: 0 125px 100px;
+  font-size: $unit-spacing-1;
+  line-height: 35px;
+  font-weight: 400;
+  width: 100%;
+  max-width: 950px;
 }
