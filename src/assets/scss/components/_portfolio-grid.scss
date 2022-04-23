@@ -6,8 +6,13 @@
 	grid-gap: 5px;
 
   img {
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     height: auto;
+
+    @media (min-width: 768px) {
+      width: 100%;
+    }
   }
 }
 
@@ -68,4 +73,9 @@
   font-weight: 400;
   width: 100%;
   max-width: 950px;
+
+  @media (max-width: 768px) {
+    padding: $unit-spacing-3;
+    margin: 0;
+  }
 }

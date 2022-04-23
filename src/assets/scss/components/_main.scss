@@ -27,11 +27,17 @@
   }
 }
 
-.main--first-img,
-.main--second-img,
-.main--third-img {
+.main--first-img
+// imgs two and third no used any more
+// .main--second-img,
+// .main--third-img
+{
   img {
     box-shadow: 0px 1px 5px $c-light-gray;
+  }
+
+  @include breakpoints(break-x-medium) {
+    display: none;
   }
 }
 
@@ -61,7 +67,7 @@
   grid-template-rows: repeat(3, min-content);
   grid-row-gap: 20px;
   grid-template-columns: repeat(6, 1fr);
-  margin-left: 20px;
+  margin: 0 20px;
 
   @include breakpoints(break-x-medium) {
     display: block;
@@ -83,8 +89,9 @@
     grid-column: 1 / 4;
 
     @include breakpoints(break-x-medium) {
+      padding-top: $unit-spacing;
       width: 100%;
-      max-width: 275px;
+      // max-width: 275px;
     }
   }
 
