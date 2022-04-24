@@ -58,7 +58,7 @@
   .content {
     margin-top: 50vh;
 
-    @include breakpoints(break-x-medium) {
+    @include breakpoints(break-medium) {
       margin-top: 30vh;
       background: $c-white-darker--2;
       border: 5px solid $c-white;

@@ -18,6 +18,7 @@ import { EducationComponent } from './components/education/education.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ParagraphComponent } from './components/paragraph/paragraph.component';
 import { ViewWorkTwoComponent } from './views/view-work-two/view-work.component';
+import { ReactComponentsComponent } from './components/react-components/react-components.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ViewWorkTwoComponent } from './views/view-work-two/view-work.component'
     EducationComponent,
     GalleryComponent,
     ParagraphComponent,
+    ReactComponentsComponent,
   ],
   imports: [
     AppRoutingModule,
