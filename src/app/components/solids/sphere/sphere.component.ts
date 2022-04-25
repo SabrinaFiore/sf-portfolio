@@ -59,7 +59,7 @@ export class SphereComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setSize(window.innerWidth / 2 , window.innerHeight / 2);
     this.dom.nativeElement.appendChild(this.renderer.domElement);
   }
 
