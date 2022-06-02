@@ -20,6 +20,7 @@ import { ParagraphComponent } from './components/paragraph/paragraph.component';
 import { ViewWorkTwoComponent } from './views/view-work-two/view-work.component';
 import { ReactComponentsComponent } from './components/react-components/react-components.component';
 import { SphereComponent } from './components/solids/sphere/sphere.component';
+import { GridComponent } from './components/grid/grid.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { SphereComponent } from './components/solids/sphere/sphere.component';
     ParagraphComponent,
     ReactComponentsComponent,
     SphereComponent,
+    GridComponent,
   ],
   imports: [
     AppRoutingModule,
