@@ -36,6 +36,10 @@
       display: block;
       text-align: center;
     }
+
+    a:link, a:visited {
+      color: unset;
+    }
   }
 
   &__logo {

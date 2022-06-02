@@ -7,7 +7,6 @@ import vertexShader from '../../../../assets/shaders/vertex-shader.glsl';
 @Component({
   selector: 'app-sphere',
   templateUrl: './sphere.component.html',
-  styleUrls: ['./sphere.component.scss']
 })
 export class SphereComponent implements OnInit {
   camera;

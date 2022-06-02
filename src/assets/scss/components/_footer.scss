@@ -14,7 +14,7 @@
   }
 
   &--content {
-    align-items: center;
+    align-items: baseline;
     display: flex;
     color: $c-dark-gray;
     justify-content: space-between;
@@ -79,6 +79,16 @@
     height: 100%;
     max-width: 20px;
     width: 100%;
+  }
+
+  address {
+    margin: unset;
+    font-family: $typography-secondary-regular;
+    font-size: $unit-spacing;
+
+    a:link {
+      color: unset;
+    }
   }
 }
 
