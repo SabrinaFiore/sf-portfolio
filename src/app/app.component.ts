@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, HostListener, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,23 +6,33 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = 'sabrina-fiore-portfolio';
   top: any;
-  left: any;
-  follower: any;
   expand: boolean = false;
+  left: any;
+  cursor: any;
+  follower: any;
 
-  @HostListener('document:click', ['$event']) onClick($event:any) {
-    this.expand = true;
-
-    setTimeout(() => {
-      this.expand=false;
-    }, 500)
+  constructor() {
   }
 
-  @HostListener('document:mousemove', ['$event']) onMousemove($event:any) {
-    this.top= ($event.pageY - 10)+ "px";
-    this.left= ($event.pageX - 10)+ "px";
+  ngAfterViewInit(): void {
+    this.cursor = document.querySelector('.cursor');
+  }
+
+  @HostListener('document:mousemove', ['$event']) onMousemove(event:any) {
+    this.cursor.setAttribute("style", "top:" + (event.pageY)+ "px; left:" + (event.pageX - 10) + "px;")
+  }
+
+  @HostListener('document:click', ['$event']) onClick(event:any) {
+
+    if (event.type === 'click') {
+      this.cursor.classList.add("expand");
+
+      setTimeout(() => {
+        this.cursor.classList.remove("expand");
+      }, 500)
+    }
   }
 }
