@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 
 import { ViewLandingComponent } from './views/view-landing/view-landing.component';
-import { ViewWorkComponent } from './views/view-work/view-work.component';
 import { ViewGalleryComponent } from './views/view-gallery/view-gallery.component';
 
 import { FormLayoutComponent } from './components/form-layout/form-layout.component';
@@ -31,7 +30,6 @@ import { SolidWhitImgComponent } from './components/solids/solid-whit-img/solid-
     FormLayoutComponent,
     FooterComponent,
     ViewLandingComponent,
-    ViewWorkComponent,
     ViewWorkTwoComponent,
     ViewGalleryComponent,
     EducationComponent,
@@ -40,7 +38,7 @@ import { SolidWhitImgComponent } from './components/solids/solid-whit-img/solid-
     ReactComponentsComponent,
     SphereComponent,
     GridComponent,
-    SolidWhitImgComponent
+    SolidWhitImgComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -25,7 +25,7 @@ export class SolidWhitImgComponent implements OnInit {
   title: any;
   imageStore: any;
 
-  texture = new THREE.TextureLoader().load('../../../../assets/images/img01.01.jpg');
+  texture = new THREE.TextureLoader().load('../../../../assets/images/green.jpg');
 
   @ViewChild('dom', { static: true }) dom!: ElementRef;
 

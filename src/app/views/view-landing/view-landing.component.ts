@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
   selector: 'view-landing',
   templateUrl: './view-landing.component.html',
 })
+
 export class ViewLandingComponent implements OnInit, OnDestroy {
   paragraph: "I was born in Bari, Southern Italy, on May 19th, 1992. I attended the Academy of Fine Arts in Rome in 2011, where I started to elaborate my interest in photography and graphic arts on a deep level. In 2017 I studied in Barcelona, where I developed my knowledge in coding and I approached the Hi-tech\'s world working as a Front-End Developer. Meantime I never stopped working on my photography and graphic art interests." = "I was born in Bari, Southern Italy, on May 19th, 1992. I attended the Academy of Fine Arts in Rome in 2011, where I started to elaborate my interest in photography and graphic arts on a deep level. In 2017 I studied in Barcelona, where I developed my knowledge in coding and I approached the Hi-tech's world working as a Front-End Developer. Meantime I never stopped working on my photography and graphic art interests.";
 
