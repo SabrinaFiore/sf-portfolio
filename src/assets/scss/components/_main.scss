@@ -27,11 +27,7 @@
   }
 }
 
-.main--first-img
-// imgs two and third no used any more
-// .main--second-img,
-// .main--third-img
-{
+.main--first-img {
   img {
     box-shadow: 0px 1px 5px $c-light-gray;
   }
@@ -158,8 +154,13 @@
     height: calc(100vh);
     flex-direction: column;
   }
+
+  .main--heading-3 {
+    line-height: $unit-spacing-2;
+  }
 }
 
+// NOT USED!
 .second-section {
   padding: 0 $unit-spacing-1;
   grid-column: center-start / center-end;

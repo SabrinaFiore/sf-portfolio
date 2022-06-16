@@ -1,6 +1,10 @@
 /* Gallery */
 
 .gallery {
+  @include breakpoints(break-medium) {
+    margin: 0 2rem;
+  }
+
   &--box {
     background: $c-white-darker--2;
     border: 5px solid $c-white;
@@ -28,6 +32,10 @@
     text-decoration: none;
     color: $c-darker-gray;
     letter-spacing: -2.6px;
+
+    @include breakpoints(break-medium) {
+      display: none;
+    }
   }
 
   &--padding {
@@ -45,13 +53,6 @@
     @include breakpoints(break-medium) {
       display: block;
     }
-  }
-
-  &--video {
-    width: 100%;
-    height: 450px;
-    display: block;
-    object-fit: cover;
   }
 
   &--claim {

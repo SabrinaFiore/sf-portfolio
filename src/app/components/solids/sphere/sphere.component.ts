@@ -1,8 +1,10 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as THREE from 'three';
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
-import fragmentShader from '../../../../assets/shaders/fragment-shader.glsl';
-import vertexShader from '../../../../assets/shaders/vertex-shader.glsl';
+import fragmentShader from './shaders/fragment-shader.glsl';
+import vertexShader from './shaders/vertex-shader.glsl';
+import fragmentShaderSphere from './shaders/fragment-shader-sphere.glsl';
+import vertexShaderShpere from './shaders/vertex-shader-sphere.glsl';
 
 @Component({
   selector: 'app-sphere',
@@ -23,12 +25,10 @@ export class SphereComponent implements OnInit {
   images: any;
   title: any;
   imageStore: any;
-
   tourus: any;
-  texture = new THREE.TextureLoader().load('../assets/images/flower01.jpg');
+  width: number | undefined;
 
-  @ViewChild('dom', { static: true })
-  dom!: ElementRef;
+  @ViewChild('dom', { static: true }) dom!: ElementRef;
 
   constructor() {
     this.time = 0;
@@ -37,7 +37,7 @@ export class SphereComponent implements OnInit {
     // this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     // this.camera.position.z = 3;
     this.camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 1000);
-    this.camera.position.z = 50;
+    this.camera.position.z = 15;
 
     this.renderer = new THREE.WebGLRenderer({
       antialias: true,
@@ -87,12 +87,11 @@ export class SphereComponent implements OnInit {
 
     this.material = new THREE.ShaderMaterial({
       uniforms: {
-        time: {value: 0},
-        // imageTexture: {value: this.texture},
+        time: {value: 0}
       },
       side: THREE.DoubleSide,
-      fragmentShader: fragmentShader,
-      vertexShader: vertexShader,
+      fragmentShader: fragmentShaderSphere,
+      vertexShader: vertexShaderShpere,
       wireframe: true,
     })
 
@@ -112,7 +111,7 @@ export class SphereComponent implements OnInit {
       side: THREE.DoubleSide,
       fragmentShader: fragmentShader,
       vertexShader: vertexShader,
-      // wireframe: true,
+      wireframe: true,
     })
 
     this.mesh = new THREE.Mesh(this.tourus, this.material);
@@ -121,8 +120,8 @@ export class SphereComponent implements OnInit {
 
   render() {
     this.time += 0.5;
-    this.mesh.rotation.x = this.time / 1000;
-	  this.mesh.rotation.y = this.time / 1000;
+    this.mesh.rotation.x = this.time / 100;
+	  this.mesh.rotation.y = this.time / 100;
 
     this.material.uniforms.time.value = this.time;
 

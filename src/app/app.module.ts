@@ -21,6 +21,7 @@ import { ViewWorkTwoComponent } from './views/view-work-two/view-work.component'
 import { ReactComponentsComponent } from './components/react-components/react-components.component';
 import { SphereComponent } from './components/solids/sphere/sphere.component';
 import { GridComponent } from './components/grid/grid.component';
+import { SolidWhitImgComponent } from './components/solids/solid-whit-img/solid-whit-img.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { GridComponent } from './components/grid/grid.component';
     ReactComponentsComponent,
     SphereComponent,
     GridComponent,
+    SolidWhitImgComponent
   ],
   imports: [
     AppRoutingModule,
