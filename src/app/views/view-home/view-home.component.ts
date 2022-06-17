@@ -1,11 +1,16 @@
-import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-view-home',
   templateUrl: './view-home.component.html',
-  styleUrls: ['./view-home.component.scss']
+  styleUrls: ['./view-home.component.scss'],
+  // host: { class: 'home' }
 })
 export class ViewHomeComponent implements OnInit {
   camera;
@@ -27,7 +32,11 @@ export class ViewHomeComponent implements OnInit {
   pickedObject: any;
   pos: any;
 
-  @ViewChild('canvas') canvas!: any;
+  @ViewChild('canvasFlagHtml') canvasFlagHtml!: any;
+  @ViewChild('dom', { static: true }) dom!: ElementRef;
+  @ViewChild('title', {static: true}) title: any;
+  @ViewChild('subtitle', {static: true}) subtitle: any;
+  @ViewChild('buttons', {static: true}) buttons: any;
 
   @HostListener('document:mousemove', ['$event']) documentClickEvent($event: MouseEvent) {
     $event.preventDefault();
@@ -35,21 +44,14 @@ export class ViewHomeComponent implements OnInit {
     this.cursor.x = ($event.clientX / window.innerWidth) * 2 - 1;
     this.cursor.y = ($event.clientY / window.innerHeight) * 2 + 1;
 
-    this.raycaster.setFromCamera(this.cursor, this.camera)
+    this.raycaster.setFromCamera(this.cursor, this.camera);
   }
-
-  // @HostListener('window:mouseout')
-  // @HostListener('window:mouseleave') clearPickPosition() {
-  //   this.cursor.x = -100000;
-  //   this.cursor.y = -100000;
-  //   // console.log(this.pickPosition);
-  // }
 
   constructor() {
     this.time = 0;
     this.scene = new THREE.Scene();
 
-    this.camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight);
+    this.camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 1000);
     this.camera.position.z = 3;
 
     this.renderer = new THREE.WebGLRenderer({
@@ -69,20 +71,18 @@ export class ViewHomeComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.renderer.setSize(window.innerWidth / 2 , window.innerHeight / 2);
-    document.body.appendChild(this.renderer.domElement);
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.dom.nativeElement.appendChild(this.renderer.domElement);
   }
 
   ngDoCheck(): void {
-    //Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.
-    //Add 'implements DoCheck' to the class.
     const intersectedObjects = this.raycaster.intersectObjects(this.scene.children, true);
     if (intersectedObjects.length) {
       if (this.pickedObject !== intersectedObjects[0].object) {
         // console.log(this.pickedObject);
         this.pickedObject = intersectedObjects[0].object;
       }
-      console.log(this.pickedObject);
+      // console.log(this.pickedObject);
     } else {
       this.pickedObject = null;
       // console.log('NULL');
@@ -109,7 +109,7 @@ export class ViewHomeComponent implements OnInit {
 
     this.mesh = new THREE.Mesh( this.geometry, this.material );
     this.scene.add( this.mesh );
-    console.log(this.mesh);
+    // console.log(this.mesh);
   }
 
   setupResize() {
@@ -140,14 +140,40 @@ export class ViewHomeComponent implements OnInit {
   }
 
   getCanvasRelativePosition($event: any) {
-    const el = this.canvas.nativeElement;
+    const el = this.canvasFlagHtml.nativeElement;
 
     const rect = el.getBoundingClientRect();
 
     return {
-      x: ($event.clientX - rect.left) * this.canvas.width / rect.width,
-      y: ($event.clientY - rect.top) * this.canvas.height / rect.height,
+      x: ($event.clientX - rect.left) * this.canvasFlagHtml.width / rect.width,
+      y: ($event.clientY - rect.top) * this.canvasFlagHtml.height / rect.height,
     };
   }
 
+  initialAnimations() {
+    const tl = gsap.timeline({paused: true, delay: 0.8, easing: "Back.out(2)"});
+
+    tl.from(this.title, {
+      opacity: 0,
+      y: 20
+    })
+    .from(this.subtitle, {
+      opacity: 0,
+      y: 20
+    }, "-=.3")
+    .from(this.buttons, {
+      stagger: {
+        each: 0.2,
+        from: "start"
+      },
+      opacity: 0,
+      y: 20
+    },"-=.3"
+    )
+    .to(this.material, {
+      opacity: 1
+    }, "-=.2");
+
+    tl.play();
+  }
 }
