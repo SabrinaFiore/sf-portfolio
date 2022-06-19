@@ -10,6 +10,9 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-three/core": "^2.16.0",
+    "@angular-three/schematics": "^5.0.3",
+    "@angular-three/soba": "^2.17.0",
     "@angular/animations": "~13.1.0",
     "@angular/common": "~13.1.0",
     "@angular/compiler": "~13.1.0",
@@ -23,7 +26,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "rxjs": "~7.4.0",
-    "three": "^0.139.2",
+    "three": "^0.135.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

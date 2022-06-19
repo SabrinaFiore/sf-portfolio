@@ -37,6 +37,7 @@
   &--addr {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     @include breakpoints(break-x-medium) {
       display: block;

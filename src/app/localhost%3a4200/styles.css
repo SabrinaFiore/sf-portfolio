@@ -292,7 +292,7 @@ figure {
   align-items: center;
   display: block;
   color: #313030;
-  justify-content: space-between;
+  justify-content: center;
 }
 @media only screen and (max-width: 768px) {
   .footer--content {
@@ -312,6 +312,7 @@ figure {
 .footer--addr {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 @media only screen and (max-width: 768px) {
   .footer--addr {
@@ -526,7 +527,7 @@ figure {
   border-left: 1px solid #dfdfdf;
 }
 .spacing {
-  padding: 0.5rem;
+  margin: 1.5rem;
 }
 .spacing-bottom {
   padding-bottom: 0.5rem;

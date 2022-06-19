@@ -1,3 +1,9 @@
+import { NgtColorPipeModule, NgtCoreModule } from '@angular-three/core';
+import { NgtAmbientLightModule, NgtPointLightModule } from '@angular-three/core/lights';
+import { NgtPrimitiveModule } from '@angular-three/core/primitive';
+import { NgtSobaLoaderModule } from '@angular-three/soba/loaders';
+import { NgtSobaOrbitControlsModule } from '@angular-three/soba/controls';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -21,6 +27,8 @@ import { ReactComponentsComponent } from './components/react-components/react-co
 import { SphereComponent } from './components/solids/sphere/sphere.component';
 import { GridComponent } from './components/grid/grid.component';
 import { SolidWhitImgComponent } from './components/solids/solid-whit-img/solid-whit-img.component';
+import { ModelComponent } from './components/solids/model/model.component';
+import { ViewModelComponent } from './views/view-model/view-model.component';
 
 @NgModule({
   declarations: [
@@ -39,12 +47,21 @@ import { SolidWhitImgComponent } from './components/solids/solid-whit-img/solid-
     SphereComponent,
     GridComponent,
     SolidWhitImgComponent,
+    ModelComponent,
+    ViewModelComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     RouterModule,
     HttpClientModule,
+    NgtCoreModule,
+    NgtSobaLoaderModule,
+    NgtPrimitiveModule,
+    NgtSobaOrbitControlsModule,
+    NgtAmbientLightModule,
+    NgtPointLightModule,
+    NgtColorPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,6 +4,7 @@ import { ViewGalleryComponent } from './views/view-gallery/view-gallery.componen
 
 import { ViewHomeComponent } from './views/view-home/view-home.component';
 import { ViewLandingComponent } from './views/view-landing/view-landing.component';
+import { ViewModelComponent } from './views/view-model/view-model.component';
 import { ViewWorkTwoComponent } from './views/view-work-two/view-work.component';
 
 export const AppRoutes: Routes = [
@@ -14,6 +15,10 @@ export const AppRoutes: Routes = [
   {
     path: 'view-home',
     component: ViewHomeComponent,
+  },
+  {
+    path: 'view-model',
+    component: ViewModelComponent,
   },
   {
     path: 'view-work-two',
