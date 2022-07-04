@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-view-model',
   templateUrl: './view-model.component.html',
-  styleUrls: ['./view-model.component.scss']
+  styleUrls: ['./view-model.component.scss'],
+  host: { class: 'model' },
 })
 export class ViewModelComponent implements OnInit {
 
@@ -17,5 +18,4 @@ export class ViewModelComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

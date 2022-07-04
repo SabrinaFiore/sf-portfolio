@@ -686,10 +686,10 @@ figure {
 }
 /* Main */
 .main {
-  display: grid;
-  grid-template-columns: [full-start] minmax(100px, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 120px) [col-end]) [center-end] minmax(100px, 1fr) [full-end];
-  grid-template-rows: min-content calc(100vh - 120px) 100vh;
-  padding-top: 8rem;
+  /* display: grid; */
+  /* grid-template-columns: [full-start] minmax(100px, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 120px) [col-end]) [center-end] minmax(100px, 1fr) [full-end]; */
+  /* grid-template-rows: min-content calc(100vh - 120px) 100vh; */
+  /* padding-top: 8rem; */
 }
 @media only screen and (max-width: 768px) {
   .main {

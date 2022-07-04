@@ -1,53 +1,64 @@
 /* --- styles.css --- */
 
+.model-main {
+  padding-top: 8rem;
+}
+
 .three {
-  position: absolute;
+  position: relative;
   overflow: hidden;
-  width: 100vw;
-  min-height: 100vh;
-  height: 100%;
+  // width: 100vw;
+  // min-height: 100vh;
+  // height: 100%;
   top: 0;
 }
 
 .three .content {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  mix-blend-mode: difference;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  z-index: 9999;
+  // position: absolute;
+  // top: 50%;
+  // left: 5%;
+  // transform: translateY(-50%);
+  // margin-top: 1rem;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // text-align: left;
+  // mix-blend-mode: difference;
+  // -webkit-touch-callout: none;
+  // -webkit-user-select: none;
+  // -khtml-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  // user-select: none;
+  // z-index: 9999;
 }
 
-button {
-  appearance: auto;
-  -webkit-writing-mode: horizontal-tb !important;
-  color: unset;
-  background-color:unset;
-  border-width: unset;
-  border-style: unset;
-  border-color: unset;
-  border-image: unset;
-}
+// button {
+//   appearance: auto;
+//   -webkit-writing-mode: horizontal-tb !important;
+//   color: unset;
+//   background-color:unset;
+//   border-width: unset;
+//   border-style: unset;
+//   border-color: unset;
+//   border-image: unset;
+// }
 
-.btn-color:hover {
-  opacity: 30%;
-}
+// .btn-color:hover {
+//   opacity: 30%;
+// }
 
-.btn-color {
-  border-radius: 50px;
-}
+// .btn-color {
+//   border-radius: 50px;
+// }
 
-.selected {
-  border-color: black;
+// .selected {
+//   border-color: black;
+// }
+
+.model-position {
+  display: grid;
+    /* grid-auto-rows: 1fr; */
+  grid-template-columns: 2fr 2fr;
+  gap: 0px 0px;
 }

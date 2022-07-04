@@ -9,10 +9,10 @@ import { PerspectiveCamera, Object3D, Mesh, MeshStandardMaterial } from 'three';
   styleUrls: ['./model.component.scss']
 })
 export class ModelComponent implements OnInit {
-  @Input() set color(value: string) {
-    this.applyColorToMaterial(value);
-    this.#color = value;
-  }
+  // @Input() set color(value: string) {
+  //   this.applyColorToMaterial(value);
+  //   this.#color = value;
+  // }
 
   #color = '';
 
@@ -29,19 +29,22 @@ export class ModelComponent implements OnInit {
 
   cupReady(object: Object3D) {
     console.log("[debug] Object3D", object);
-    this.cupMaterial = <MeshStandardMaterial>(<Mesh>object.getObjectByName('Object_2')).material;
-    this.cupMaterial.color.setHex(parseInt('d67600', 16));
-    this.applyColorToMaterial(this.#color);
+    // this.cupMaterial = <MeshStandardMaterial>(<Mesh>object.getObjectByName('Object_2')).material;
+    // this.cupMaterial.color.setHex(parseInt('d67600', 16));
+    // this.applyColorToMaterial(this.#color);
   }
 
   controlsReady(controls: NgtSobaOrbitControls) {
     const orbitControls = controls.controls;
-    orbitControls.enableZoom = false;
+    console.log("[debug] Object3D orbitControls", orbitControls);
+    // orbitControls.enableZoom = false;
     orbitControls.autoRotate = true;
     orbitControls.autoRotateSpeed = 10;
     const camera = orbitControls.object as PerspectiveCamera;
-    camera.zoom = 3.5;
-    camera.position.setY(3);
+    camera.zoom = 10;
+    camera.position.setY(100);
+    // camera.position.setX(100);
+    camera.position.setZ(50);
   }
 
   applyColorToMaterial(color: string) {

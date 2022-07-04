@@ -29,6 +29,8 @@ export const AppRoutes: Routes = [
     component: ViewGalleryComponent,
   },
 ];
+
+console.log('[debug] Routes', AppRoutes)
 @NgModule({
   imports: [
     RouterModule.forRoot(AppRoutes)],

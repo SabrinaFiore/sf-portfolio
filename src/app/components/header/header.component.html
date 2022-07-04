@@ -6,7 +6,10 @@
         </a>
         <div class="header__content">
             <ng-template ngFor let-link [ngForOf]="links" let-i="index">
-                <a class="header__items color-darker-gray" [routerLink]="link.path">{{ link.name }}</a>
+                <a class="header__items color-darker-gray"
+                  [routerLink]="link.path"
+                  (click)="refresh(link.id)"
+                >{{ link.name }}</a>
             </ng-template>
         </div>
     </div>
