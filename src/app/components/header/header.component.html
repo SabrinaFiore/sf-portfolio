@@ -1,15 +1,20 @@
 <section class="header">
     <div class="header__box wrapper--big">
-        <a class="header__logo" [routerLink]="''">
-            <img src="../../../assets/images/logo.svg" alt="header__logo">
-            <div class="header__logo--naming color-darker-gray">Sabrina Fiore</div>
-        </a>
         <div class="header__content">
             <ng-template ngFor let-link [ngForOf]="links" let-i="index">
+              <ng-container *ngIf=" link.path === './portfolio'; else lastHeaderItems">
+                <a class="header__logo" [routerLink]="link.path"
+                (click)="refresh(link.id)">
+                  <img src="../../../assets/images/logo.svg" alt="header__logo">
+                  <div class="header__logo--naming color-darker-gray">Sabrina Fiore</div>
+                </a>
+              </ng-container>
+              <ng-template #lastHeaderItems>
                 <a class="header__items color-darker-gray"
                   [routerLink]="link.path"
                   (click)="refresh(link.id)"
                 >{{ link.name }}</a>
+              </ng-template>
             </ng-template>
         </div>
     </div>

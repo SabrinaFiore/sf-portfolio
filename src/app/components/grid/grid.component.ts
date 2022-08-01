@@ -1,3 +1,4 @@
+import { NgtGLTFLoaderService } from '@angular-three/soba/loaders';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grid.component.scss']
 })
 export class GridComponent implements OnInit {
+  model = this.gltfLoaderService.load('assets/still_life_with_orange/scene.gltf')
 
-  constructor() { }
+  constructor(private gltfLoaderService: NgtGLTFLoaderService) {
+  }
 
   ngOnInit(): void {
   }

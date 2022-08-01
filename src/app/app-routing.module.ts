@@ -1,28 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ViewGalleryComponent } from './views/view-gallery/view-gallery.component';
+import { ViewPortfolioHomeComponent } from './views/view-portfolio/view-portfolio-home.component';
 
-import { ViewHomeComponent } from './views/view-home/view-home.component';
-import { ViewLandingComponent } from './views/view-landing/view-landing.component';
-import { ViewModelComponent } from './views/view-model/view-model.component';
-import { ViewWorkTwoComponent } from './views/view-work-two/view-work.component';
+import { ViewWorkComponent } from './views/view-work/view-work.component';
 
 export const AppRoutes: Routes = [
   {
     path: '',
-    component: ViewLandingComponent,
+    redirectTo: 'portfolio',
+    pathMatch: 'full',
   },
   {
-    path: 'view-home',
-    component: ViewHomeComponent,
+    path: 'portfolio',
+    data: { title: 'sabrina fiore portfolio' },
+    component: ViewPortfolioHomeComponent,
   },
   {
-    path: 'view-model',
-    component: ViewModelComponent,
-  },
-  {
-    path: 'view-work-two',
-    component: ViewWorkTwoComponent,
+    path: 'view-work',
+    component: ViewWorkComponent,
   },
   {
     path: 'view-gallery',

@@ -13,8 +13,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 
-import { ViewLandingComponent } from './views/view-landing/view-landing.component';
 import { ViewGalleryComponent } from './views/view-gallery/view-gallery.component';
+import { ViewPortfolioHomeComponent } from './views/view-portfolio/view-portfolio-home.component';
+import { ViewWorkComponent } from './views/view-work/view-work.component';
 
 import { FormLayoutComponent } from './components/form-layout/form-layout.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -22,13 +23,10 @@ import { CardComponent } from './components/card/card.component';
 import { EducationComponent } from './components/education/education.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ParagraphComponent } from './components/paragraph/paragraph.component';
-import { ViewWorkTwoComponent } from './views/view-work-two/view-work.component';
-import { ReactComponentsComponent } from './components/react-components/react-components.component';
-import { SphereComponent } from './components/solids/sphere/sphere.component';
+import { ModelObjComponent } from './components/solids/model-obj/model-obj.component';
 import { GridComponent } from './components/grid/grid.component';
-import { SolidWhitImgComponent } from './components/solids/solid-whit-img/solid-whit-img.component';
 import { ModelComponent } from './components/solids/model/model.component';
-import { ViewModelComponent } from './views/view-model/view-model.component';
+import { CircleComponent } from './components/circle/circle/circle.component';
 
 @NgModule({
   declarations: [
@@ -37,18 +35,16 @@ import { ViewModelComponent } from './views/view-model/view-model.component';
     CardComponent,
     FormLayoutComponent,
     FooterComponent,
-    ViewLandingComponent,
-    ViewWorkTwoComponent,
+    ViewWorkComponent,
     ViewGalleryComponent,
+    ViewPortfolioHomeComponent,
     EducationComponent,
     GalleryComponent,
     ParagraphComponent,
-    ReactComponentsComponent,
-    SphereComponent,
     GridComponent,
-    SolidWhitImgComponent,
     ModelComponent,
-    ViewModelComponent,
+    ModelObjComponent,
+    CircleComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -1,0 +1,4 @@
+<ngt-canvas [scene]="{ background: 'white' | color }" class="model-obj1-height">
+  <ngt-primitive *ngIf="obj$ | async as obj" [object]="obj.scene" (ready)="cupReady($event)"></ngt-primitive>
+  <ngt-soba-orbit-controls (ready)="controlsReady(controls)"></ngt-soba-orbit-controls>
+</ngt-canvas>
