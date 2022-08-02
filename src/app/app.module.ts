@@ -25,7 +25,6 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { ParagraphComponent } from './components/paragraph/paragraph.component';
 import { ModelObjComponent } from './components/solids/model-obj/model-obj.component';
 import { GridComponent } from './components/grid/grid.component';
-import { ModelComponent } from './components/solids/model/model.component';
 import { CircleComponent } from './components/circle/circle/circle.component';
 
 @NgModule({
@@ -42,7 +41,6 @@ import { CircleComponent } from './components/circle/circle/circle.component';
     GalleryComponent,
     ParagraphComponent,
     GridComponent,
-    ModelComponent,
     ModelObjComponent,
     CircleComponent,
   ],

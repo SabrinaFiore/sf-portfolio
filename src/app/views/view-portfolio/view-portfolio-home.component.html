@@ -1,74 +1,35 @@
-<!-- <app-model [color]="selectedColor"></app-model> -->
-<div class="model-main wrapper--extra-big borders spacing-0">
+<div class="wrapper--extra-big borders spacing-0">
   <div class="model-position">
     <div class="three">
       <div class="content">
-        <!-- <section class="first-section"> -->
-        <!-- <div class="info"> -->
         <p class="italic bold typography-primary">Portfolio under costruction</p>
-        <div class="main--heading-1">
+        <div>
           <h1 class="h1">Hi Folks,</h1>
-          <h1 class="h1">I'm Sabrina Fiore</h1>
+          <h1 class="h1">I'm Sabrina Fiore and</h1>
+          <h1 class="h1">Welcome in my tiny house</h1>
         </div>
-        <div class="main--paragraph paragraph color-darker-gray">
+        <div class="paragraph color-darker-gray">
           <div class="bold">Front End Developer and UI Designer/Developer</div>
           <div>I work as a Front End Developer but I designed this portfolio to combine my knowledge about UI-Design and
             Front-End Development.</div>
-          <div class="spacing-righ-small main--paragraph">
-            <h4 class="main--heading-4 h4 color-darker-gray bold spacing-top--large">About Me</h4>
-            <div class="main--second-paragraph paragraph color-darker-gray">I was born in Bari, Southern Italy, on May
+          <div class="spacing-righ-small">
+            <h4 class="h4 color-darker-gray bold spacing-top--large">About Me</h4>
+            <div class="paragraph color-darker-gray">I was born in Bari, Southern Italy, on May
               19th, 1992. I attended the Academy of Fine Arts in Rome in 2011, where I started to elaborate my interest
               in photography and graphic arts on a deep level. In 2017 I studied in Barcelona, where I developed my
               knowledge in coding and I approached the Hi-tech's world working as a Front-End Developer. Meantime I
               never stopped working on my photography and graphic art interests.</div>
-            <h3 class="main--heading-3 paragraph bold color-darker-gray spacing-top--large">Because of my background
+            <h3 class="paragraph bold color-darker-gray spacing-top--large">Because of my background
               which allow me to be very sensitive to design details, typography and photography I'm constantly improving
               my Autodidact Creative Developer's and UI Developer knowledge also because I have a serious passion for
               and creating intuitive, dynamic user experiences.</h3>
           </div>
         </div>
-        <!-- <a class="btn btn--start">Get Started</a> -->
-        <!-- </div> -->
-        <!-- <div class="visuals">
-            <div class="image-container main--first-img">
-              <img #imageFirst src="../../../assets/images/img01.01.jpg" alt=""/>
-            </div> -->
-        <!-- <div class="image-container main--second-img">
-              <img #imageSecond src="../../../assets/images/img01.02.jpg" alt=""/>
-            </div> -->
-        <!-- </div> -->
-        <!-- <section class="main--caption">
-            <div class="color-light-gray h5">
-              <p class="main--captition-paragraph">To the top - Porto Lisbon 2020</p>
-              <p class="main--captition-paragraph">To the bottom - London UK 2017</p>
-            </div>
-          </section> -->
-        <!-- </section> -->
-        <!-- <section class="second-section" #secondSection>
-          <h4 class="main--heading-4 h4 color-darker-gray bold" id="about">About Me</h4>
-          <h1 class="main--heading-2 h3 color-darker-gray" id="buy">Autodidact Creative Developer</h1>
-          <div class="info-1">
-            <div class="info-1__text main--second-content">
-              <p class="main--second-paragraph paragraph color-darker-gray">{{ paragraph }}</p>
-              <h3 class="main--heading-3 h4 color-darker-gray bold">Because of my background which allow me to be very sensitive to design details, typography and photography I'm constantly improving my Autodidact Creative Developer's knowledge</h3>
-              <div class="btn--learn h4 color-darker-gray">Autodidact Creative Developer</div>
-            </div>
-            <div class="info-1__visual main--third-img">
-              <img #imageThird src="../../../assets/images/img01.jpg" alt="typography-img">
-            </div>
-          </div>
-        </section> -->
       </div>
-      <!-- <button *ngFor="let color of colors"
-        style="width: 30px; height: 30px; margin: 1rem"
-        [style.background]="color"
-        type="button"
-        class="btn btn-color"
-        [ngClass]="{ 'selected': selectedColor === color }"
-        [style.background-color]="color"
-        (click)="selectedColor = color"
-        ></button> -->
     </div>
-    <app-model></app-model>
+    <app-model-obj
+      [fObj]=true
+      [obj$]="model"
+    ></app-model-obj>
   </div>
 </div>

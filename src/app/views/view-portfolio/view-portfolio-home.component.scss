@@ -1,8 +1,4 @@
-/* --- styles.css --- */
-
-.model-main {
-  padding-top: 8rem;
-}
+/* --- Main Portfolio Home --- */
 
 .three {
   position: relative;
@@ -12,7 +8,9 @@
 
 .model-position {
   display: grid;
-    /* grid-auto-rows: 1fr; */
+  /* grid-auto-rows: 1fr; */
   grid-template-columns: 2fr 2fr;
   gap: 0px 0px;
+  align-content: center;
+  height: 100vh;
 }

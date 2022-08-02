@@ -1,8 +1,9 @@
-:host {
+.model-obj {
   display: block;
   height: 50vh;
+}
 
-  .model-obj1-height {
-    height: 100%;
-  }
+.model-obj-default-height {
+  display: block;
+  height: 100vh;
 }

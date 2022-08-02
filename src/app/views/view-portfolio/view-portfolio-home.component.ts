@@ -1,3 +1,4 @@
+import { NgtGLTFLoaderService } from '@angular-three/soba/loaders';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,14 +8,10 @@ import { Component, OnInit } from '@angular/core';
   host: { class: 'model' },
 })
 export class ViewPortfolioHomeComponent implements OnInit {
+  model = this.gltfLoaderService.load('assets/station_b/scene.gltf')
 
-  colors: string[] = [
-    '#b3478c', '#1e62c0', '#ffa764', '#3de68b', '#a11f2a', '#ffbf00'
-  ];
-
-  selectedColor = this.colors[0];
-
-  constructor() { }
+  constructor(private gltfLoaderService: NgtGLTFLoaderService) {
+  }
 
   ngOnInit(): void {
   }

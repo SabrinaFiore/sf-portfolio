@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-grid',
-  templateUrl: './grid.component.html',
-  styleUrls: ['./grid.component.scss']
+  templateUrl: './grid.component.html'
 })
+
 export class GridComponent implements OnInit {
   model = this.gltfLoaderService.load('assets/still_life_with_orange/scene.gltf')
 
@@ -14,5 +14,4 @@ export class GridComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
