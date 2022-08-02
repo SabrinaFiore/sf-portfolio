@@ -71,3 +71,11 @@
     }
   }
 }
+
+.main-hero {
+  &--title {
+    @include breakpoints(break-medium) {
+      padding-bottom: $unit-spacing*2;
+    }
+  }
+}

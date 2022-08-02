@@ -4,29 +4,16 @@
   position: relative;
 	pointer-events: none;
 	border-radius: 50%;
+  background-color: $c-darker-gray;
 
-  --size-small: 20px;
+  --size-small: 10px;
 
-  border: 2px solid $c-light-gray;
+  border: 2px solid $c-darker-gray;
   opacity: 0.8;
   width: var(--size-small);
   height: var(--size-small);
   z-index: 9999;
 }
-
-.cursor::after {
-  content: "";
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  z-index: 99999;
-  background: rgb(154, 41, 82);
-  border-radius: 50%;
-  opacity: 0.8;
-  transition: width .3s, height .3s, left .3s, top .3s, opacity .3s;
-  animation: cursorAnim2 .5s infinite alternate;
-}
-
 
 @keyframes cursorAnim {
   from {
@@ -61,7 +48,7 @@
 
 .expand {
   animation: cursorAnim3 .5s forwards;
-  border: 1px solid rgb(154, 41, 82);
+  border: 1px solid rgb(117, 179, 170);
 }
 
 * {

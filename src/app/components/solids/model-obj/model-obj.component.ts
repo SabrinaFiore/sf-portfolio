@@ -34,7 +34,7 @@ export class ModelObjComponent implements OnInit {
     this.obj$.subscribe(res => {
         if (res.asset.extras.title === 'Station B') {
           console.log("[debug] res ENTRA",res.asset.extras.title)
-          camera.zoom = 15;
+          camera.zoom = 10;
           camera.position.setZ(25);
           orbitControls.autoRotate = true;
           orbitControls.autoRotateSpeed = 3;

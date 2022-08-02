@@ -1,5 +1,5 @@
 import { NgtGLTFLoaderService } from '@angular-three/soba/loaders';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-grid',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class GridComponent implements OnInit {
+  @Input() hideColumn: boolean = false
+
   model = this.gltfLoaderService.load('assets/still_life_with_orange/scene.gltf')
 
   constructor(private gltfLoaderService: NgtGLTFLoaderService) {

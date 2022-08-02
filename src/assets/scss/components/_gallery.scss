@@ -10,15 +10,6 @@
     border: 5px solid $c-white;
     overflow: hidden;
 
-    img {
-      transition-delay: 1s;
-      transition: all 1s ease-in-out;
-      width: 100%;
-      height: 300px;
-      display: block;
-      object-fit: cover;
-    }
-
     &:hover img {
       transform: scale(1.2);
     }
@@ -62,25 +53,6 @@
   &--item {
     height: auto;
   }
-
-  &--imgs {
-    display: block;
-  }
-}
-
-.box-filter {
-	position: relative;
-
-	&:hover:after {
-		bottom: 100%;
-	}
-}
-
-.fixed {
-  position: fixed;
-  top: 50vh;
-  left: 0;
-  width: 30%;
 }
 
 .gallery--box {

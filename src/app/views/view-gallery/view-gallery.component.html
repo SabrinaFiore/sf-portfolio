@@ -6,16 +6,15 @@
     </div>
   </section>
   <div class="content">
-    <div class="fixed typography-fourth">
+    <div class="content--space"></div>
+    <div class="z-index-position-0 position-fixed typography-fourth">
       <div class="gallery--text spacing-left-x-small">STAY EXPERIMENTAL & CREATIVE</div>
     </div>
     <div class="gallery">
-      <!-- Grid Photo Main Section -->
-      <section>
+      <section class="z-index-position-99">
         <div class="gallery--container">
           <div class="gallery--item"></div>
           <div class="gallery--box gallery--item gallery--padding">
-            <!-- Should be delete -->
             <paragraph class="gallery--box-text" [claim]="firstClaim"></paragraph>
             <paragraph class="gallery--box-text" [claim]="secondClaim"></paragraph>
             <paragraph class="gallery--box-text" [claim]="thirdClaim"></paragraph>
@@ -27,7 +26,7 @@
         </div>
         <p class="h5 typography-fourth color-light-gray spacing-left-medium">Use the mouse to move through the x, y, z axis of the objects</p>
         <div class="gallery--box gallery--item">
-          <app-grid></app-grid>
+          <app-grid [hideColumn]=true></app-grid>
         </div>
         <app-circle></app-circle>
         <div class="pre-footer"></div>

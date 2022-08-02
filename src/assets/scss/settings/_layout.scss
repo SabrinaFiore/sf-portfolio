@@ -52,12 +52,12 @@
     }
 }
 
-/* Useful classes */
 .borders {
   border-right: 1px solid $c-white-darker--1;
   border-left: 1px solid $c-white-darker--1;
 }
 
+/* Useful spacing classes */
 .spacing-0 {
   padding: $unit-spacing;
 }
@@ -96,4 +96,24 @@
 
 .spacing-top--large {
   margin-top: $unit-spacing-3;
+}
+
+.spacing-pd-top--large {
+  padding-top: $unit-spacing*3.5;
+}
+
+/* Useful position classes */
+.z-index-position-0 {
+  z-index: -1;
+}
+
+.z-index-position-99 {
+  z-index: 99;
+}
+
+.position-fixed {
+  position: fixed;
+  top: 50vh;
+  left: 0;
+  width: 30%;
 }

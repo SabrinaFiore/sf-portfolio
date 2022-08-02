@@ -98,3 +98,11 @@
   height: 200px;
   width: 100%;
 }
+
+.pre-footer-portfolio-page {
+  @include breakpoints(break-x-medium) {
+    min-height: 200px;
+    height: 200px;
+    width: 100%;
+  }
+}

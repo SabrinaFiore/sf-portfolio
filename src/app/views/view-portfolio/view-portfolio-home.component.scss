@@ -1,9 +1,16 @@
 /* --- Main Portfolio Home --- */
+@import '../../../assets/scss/tools/media-queries-mixin';
+@import '../../../assets/scss/tools/media-queries';
+@import '../../../assets/scss/tools/unit';
 
 .three {
   position: relative;
   overflow: hidden;
   top: 0;
+
+  @include breakpoints(break-medium) {
+    margin-bottom: $unit-spacing*3;
+  }
 }
 
 .model-position {
@@ -13,4 +20,11 @@
   gap: 0px 0px;
   align-content: center;
   height: 100vh;
+  padding: 0 $unit-spacing;
+
+  @include breakpoints(break-medium) {
+    display: block;
+    height: 40vh;
+    padding: $unit-spacing*8 $unit-spacing-3 0;
+  }
 }
