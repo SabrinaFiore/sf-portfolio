@@ -1,8 +1,6 @@
 import { Component, OnInit, AfterViewInit, OnDestroy, Inject } from '@angular/core';
-import { GalleryService } from 'src/app/components/gallery/gallery.service';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { gsap } from 'gsap';
-import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'view-gallery',
@@ -27,10 +25,7 @@ export class ViewGalleryComponent implements OnInit, AfterViewInit, OnDestroy {
   fourthTitle = '';
   fourthClaim = 'It\'s incredible how one image is based on simple points and thousands of these points can form beautiful images and how we can transform it cross code. Is a process, based on exploration, iteration, reflection and discovery.';
 
-  constructor(private GalleryService: GalleryService,
-    @Inject(DOCUMENT) private document: Document) {
-    this.imgs = this.GalleryService.getImages();
-  }
+  constructor() {}
 
   ngOnInit(): void {
     this.initialAnimations();
@@ -68,11 +63,11 @@ export class ViewGalleryComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   initialAnimations(): void {
-    gsap.from(this.document.querySelector('.gallery'), {
-      duration: 0.7,
-      opacity: 0,
-      y: -30,
-      delay: 0.7,
-    });
+    // gsap.from(this.document.querySelector('.gallery'), {
+    //   duration: 0.7,
+    //   opacity: 0,
+    //   y: -30,
+    //   delay: 0.7,
+    // });
   }
 }

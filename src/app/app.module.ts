@@ -17,11 +17,7 @@ import { ViewGalleryComponent } from './views/view-gallery/view-gallery.componen
 import { ViewPortfolioHomeComponent } from './views/view-portfolio/view-portfolio-home.component';
 import { ViewWorkComponent } from './views/view-work/view-work.component';
 
-import { FormLayoutComponent } from './components/form-layout/form-layout.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CardComponent } from './components/card/card.component';
-import { EducationComponent } from './components/education/education.component';
-import { GalleryComponent } from './components/gallery/gallery.component';
 import { ParagraphComponent } from './components/paragraph/paragraph.component';
 import { ModelObjComponent } from './components/solids/model-obj/model-obj.component';
 import { GridComponent } from './components/grid/grid.component';
@@ -31,14 +27,10 @@ import { CircleComponent } from './components/circle/circle/circle.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    CardComponent,
-    FormLayoutComponent,
     FooterComponent,
     ViewWorkComponent,
     ViewGalleryComponent,
     ViewPortfolioHomeComponent,
-    EducationComponent,
-    GalleryComponent,
     ParagraphComponent,
     GridComponent,
     ModelObjComponent,
