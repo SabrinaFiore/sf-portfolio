@@ -16,15 +16,17 @@
           <div class="gallery--item"></div>
           <div class="gallery--box gallery--item gallery--padding">
             <paragraph class="gallery--box-text" [claim]="firstClaim"></paragraph>
-            <paragraph class="gallery--box-text" [claim]="secondClaim"></paragraph>
+            <!-- <paragraph class="gallery--box-text" [claim]="secondClaim"></paragraph> -->
             <paragraph class="gallery--box-text" [claim]="thirdClaim"></paragraph>
             <div class="gallery--claim">
               <div class="h1 bold typography-fourth">“thinking about designing not the object — but a process to generate objects.”</div>
             </div>
-            <paragraph [claim]="fourthClaim"></paragraph>
+            <paragraph class="gallery--box-text" [claim]="fourthClaim"></paragraph>
           </div>
         </div>
-        <p class="h5 typography-fourth color-light-gray spacing-left-medium">Use the mouse to move through the x, y, z axis of the objects</p>
+        <div class="spacing-0"></div>
+        <p class="h5 typography-fourth color-darker-gray spacing-left-medium bold">Use the mouse to move through the x, y, z axis of the objects <br>
+        Scroll on the side</p>
         <div class="gallery--box gallery--item">
           <app-grid [hideColumn]=true></app-grid>
         </div>

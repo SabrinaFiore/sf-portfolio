@@ -1,21 +1,24 @@
 <div class="grid">
   <div class="row justify-content-md-center">
     <div class="row">
-      <div *ngIf="hideColumn" class="col-4">Lorem ipsum</div>
-      <div class="col-8">
+      <!-- <div ng-class="{'col' : a, 'class2' : !a, 'class3': b !== c }"></div> -->
+      <div [ngClass]="{'col': hideColumn , 'col-8' : !hideColumn}">
         <app-model-obj
-          [heightObj]=true
-        ></app-model-obj></div>
+        [heightObj]=true
+        ></app-model-obj>
+      </div>
+      <div [ngClass]="{'grid--display-none': hideColumn}" class="col-4">Lorem ipsum</div>
     </div>
     <div class="spacing-0"></div>
     <div class="row">
-      <div class="col-8">
+      <!-- <div ng-class="{'col' : a, 'class2' : !a, 'class3': b !== c }"></div> -->
+      <div [ngClass]="{'col': hideColumn , 'col-8' : !hideColumn}">
         <app-model-obj
           [heightObj]=true
           [obj$]="model"
           ></app-model-obj>
         </div>
-      <div *ngIf="hideColumn" class="col-4">Lorem ipsum</div>
+      <div [ngClass]="{'grid--display-none': hideColumn}" class="col-4">Lorem ipsum</div>
     </div>
   </div>
 </div>

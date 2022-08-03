@@ -82,3 +82,15 @@
     padding: 2rem;
   }
 }
+
+.grid {
+  padding: $unit-spacing-2 $unit-spacing-3;
+
+  &--display-none {
+    display: none;
+  }
+
+  @include breakpoints(break-x-medium) {
+    padding: $unit-spacing-2 $unit-spacing--3 $unit-spacing-2 $unit-spacing-2;
+  }
+}

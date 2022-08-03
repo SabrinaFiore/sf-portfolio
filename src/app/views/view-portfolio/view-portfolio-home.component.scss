@@ -24,7 +24,7 @@
 
   @include breakpoints(break-medium) {
     display: block;
-    height: 40vh;
-    padding: $unit-spacing*8 $unit-spacing-3 0;
+    height: 50vh;
+    margin: $unit-spacing*8 $unit-spacing-3 0;
   }
 }
