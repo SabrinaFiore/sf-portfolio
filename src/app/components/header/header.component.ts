@@ -13,8 +13,9 @@ export class HeaderComponent implements OnInit {
 
   links = [
     { id: 1, name: '', path: './portfolio' },
-    { id: 2, name: 'Work Expericence', path: './view-work' },
-    { id: 3, name: 'Personal Projects', path: './view-gallery' },
+    { id: 2, name: 'Work', path: './view-work' },
+    { id: 3, name: 'Projects', path: './view-gallery' },
+    { id: 4, name: 'Contact', path: './view-contact' },
   ];
 
   ngOnInit() {

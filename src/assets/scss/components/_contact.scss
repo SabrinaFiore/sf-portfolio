@@ -1,0 +1,18 @@
+/* Contact */
+
+.contact {
+  a {
+    color: unset;
+  }
+
+  &--position {
+    display: grid;
+    /* grid-auto-rows: 1fr; */
+    grid-template-columns: 2fr 2fr;
+    gap: 0px 0px;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 $unit-spacing;
+  }
+}
