@@ -95,15 +95,17 @@
 }
 
 .pre-footer {
-  min-height: 200px;
-  height: 200px;
+  // SET MIN-HEIGHT to 200px WHILE YOI ARE USING FOOTER
+  min-height: 100px;
+  height: 100px;
   width: 100%;
 }
 
 .pre-footer-portfolio-page {
   @include breakpoints(break-x-medium) {
-    min-height: 200px;
-    height: 200px;
+    // SET MIN-HEIGHT to 200px WHILE YOI ARE USING FOOTER
+    min-height: 100px;
+    height: 100px;
     width: 100%;
   }
 }

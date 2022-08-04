@@ -14,5 +14,13 @@
     align-items: center;
     height: 100vh;
     padding: 0 $unit-spacing;
+
+    @include breakpoints(break-x-medium) {
+      // display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: flex-start;
+      justify-content: center;
+    }
   }
 }

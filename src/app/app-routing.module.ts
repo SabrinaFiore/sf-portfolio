@@ -1,9 +1,9 @@
-import { ViewContactComponent } from './views/view-contact/view-contact.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ViewGalleryComponent } from './views/view-gallery/view-gallery.component';
 import { ViewPortfolioHomeComponent } from './views/view-portfolio/view-portfolio-home.component';
 import { ViewWorkComponent } from './views/view-work/view-work.component';
+import { ViewGalleryComponent } from './views/view-gallery/view-gallery.component';
+import { ViewContactComponent } from './views/view-contact/view-contact.component';
 
 export const AppRoutes: Routes = [
   {
@@ -14,7 +14,7 @@ export const AppRoutes: Routes = [
   {
     path: 'portfolio',
     data: { title: 'sabrina fiore portfolio' },
-    component: ViewPortfolioHomeComponent,
+    component: ViewPortfolioHomeComponent
   },
   {
     path: 'view-work',
@@ -30,7 +30,6 @@ export const AppRoutes: Routes = [
   },
 ];
 
-console.log('[debug] Routes', AppRoutes)
 @NgModule({
   imports: [
     RouterModule.forRoot(AppRoutes)],

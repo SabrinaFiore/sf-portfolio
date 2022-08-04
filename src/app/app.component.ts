@@ -1,4 +1,5 @@
 import { Component, HostListener, AfterViewInit } from '@angular/core';
+import { HeaderService } from './components/header/header.service';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +14,15 @@ export class AppComponent implements AfterViewInit {
   left: any;
   cursor: any;
   follower: any;
+  contactPage: any;
 
-  constructor() {
+  // TO ACTIVE SUBSCRIBE GET SHOWFOOTER IN TRUE
+  showFooter: boolean = false;
+
+  constructor(private hs: HeaderService) {
+    this.hs.showFooterSubject.subscribe(x => {
+      this.showFooter = x
+    })
   }
 
   ngAfterViewInit(): void {
@@ -26,7 +34,6 @@ export class AppComponent implements AfterViewInit {
   }
 
   @HostListener('document:click', ['$event']) onClick(event:any) {
-
     if (event.type === 'click') {
       this.cursor.classList.add("expand");
 
