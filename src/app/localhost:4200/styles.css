@@ -194,8 +194,11 @@ figure {
   gap: 0px 0px;
   align-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
   padding: 0 1rem;
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  /* position: absolute; */
 }
 @media only screen and (max-width: 768px) {
   .contact--position {
@@ -204,6 +207,7 @@ figure {
     align-content: center;
     align-items: flex-start;
     justify-content: center;
+    height: 100vh;
   }
 }
 /* Cursor */
@@ -352,9 +356,9 @@ figure {
 }
 @media only screen and (max-width: 768px) {
   .pre-footer-portfolio-page {
-    min-height: 100px;
-    height: 100px;
-    width: 100%;
+    /* min-height: 100px; */
+    /* height: 100px; */
+    /* width: 100%; */
   }
 }
 /* Portfolio-grid */
