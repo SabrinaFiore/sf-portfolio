@@ -16,11 +16,15 @@
     padding: 0 $unit-spacing;
 
     @include breakpoints(break-x-medium) {
-      // display: flex;
+      display: flex;
       flex-direction: column;
       align-content: center;
       align-items: flex-start;
       justify-content: center;
+
+      .spacing--hidden {
+        display: none;
+      }
     }
   }
 }
