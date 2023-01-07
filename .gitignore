@@ -6,6 +6,13 @@
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
+/sabrinafioredev.com
+/localhost:1234
+/localhost:3000
+/localhost:4200
+/localhost:53163
+/localhost:62851
+/localhost%3a4200
 
 # dependencies
 /node_modules
