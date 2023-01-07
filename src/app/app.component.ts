@@ -42,4 +42,12 @@ export class AppComponent implements AfterViewInit {
       }, 500)
     }
   }
+
+  onActivate(event: any) {
+    let pos = window.pageYOffset;
+
+    if (pos > 0) {
+      window.scrollTo(0, 0);
+    }
+  }
 }
