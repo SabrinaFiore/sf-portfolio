@@ -23,6 +23,7 @@ import { ModelObjComponent } from './components/solids/model-obj/model-obj.compo
 import { GridComponent } from './components/grid/grid.component';
 import { CircleComponent } from './components/circle/circle/circle.component';
 import { ViewContactComponent } from './views/view-contact/view-contact.component';
+import { ItemsComponent } from './components/grid/items/items.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ViewContactComponent } from './views/view-contact/view-contact.componen
     ModelObjComponent,
     CircleComponent,
     ViewContactComponent,
+    ItemsComponent,
   ],
   imports: [
     AppRoutingModule,

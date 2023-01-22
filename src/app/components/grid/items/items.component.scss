@@ -1,0 +1,10 @@
+@import '../../../../assets/scss/tools/unit';
+
+.canvas {
+  display: flex;
+  justify-content: center;
+
+  &-spacing {
+    padding: 0 $unit-spacing--2;
+  }
+}
